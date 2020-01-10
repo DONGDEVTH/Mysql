@@ -1,0 +1,2 @@
+﻿DECLARE Duplicate_Entry_Error CONTINUE FOR 1062;
+DECLARE ONTINUE HANDLER FOR Duplicate_Entry_Error SET HAVE_ERROR = 1;

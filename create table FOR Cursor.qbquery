@@ -1,0 +1,21 @@
+﻿DELIMITER$
+DROP PROCEDURE IF EXITST CREATE_TBL_CATEGORIES$
+CREATE PROCEDURE CREATE_TBL_CATEGORIES()
+BEGIN
+  CREATE TABLE IF NOT EXISTS TBL_CATEGORIES(
+  CategoryID INT NOT NULL,
+  CategoryName VARCHAR(15) NOT NULL,
+  Description LONGTEXT NULL,
+  PRIMARY KEY (CategoryID))
+ENGINE = INNODB CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+DELETE FROM TBL_CATEGORIES;
+INSERT INTO TBL_CATEGORIES(CategoryID,CategoryName,Description) VALUE (1, 'Beverages','Soft Drinks,Coffee,Teas,beers,and ales');
+INSERT INTO TBL_CATEGORIES(CategoryID,CategoryName,Description) VALUE (2, 'Condiments','Sweet and savory sauces,relishes,spreads, and seasonongs');
+INSERT INTO TBL_CATEGORIES(CategoryID,CategoryName,Description) VALUE (3, 'Confections','Desserts,candies, and sweet breads');
+INSERT INTO TBL_CATEGORIES(CategoryID,CategoryName,Description) VALUE (4, 'Dairy Products','Cheeses');
+INSERT INTO TBL_CATEGORIES(CategoryID,CategoryName,Description) VALUE (5, 'Grains/Cereals','Breads, crackers, pasta, and cereal');
+INSERT INTO TBL_CATEGORIES(CategoryID,CategoryName,Description) VALUE (6, 'Meat/Poultry','Prepared meats');
+INSERT INTO TBL_CATEGORIES(CategoryID,CategoryName,Description) VALUE (7, 'Produce','Dried fruit and bean curd');
+INSERT INTO TBL_CATEGORIES(CategoryID,CategoryName,Description) VALUE (8, 'Seafood','Seaweed and fish');
+Select 'OK. DONE' AS 'MESSAGE';
+END$

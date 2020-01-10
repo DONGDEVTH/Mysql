@@ -1,0 +1,8 @@
+﻿delimiter$
+drop procedure if exits inout_parameter$
+create procedure inout_parameter (INOUT PARA_INOUT INT)
+BEGIN
+SELECT PARA_INOUT;
+SET PARA_INOUT=2;
+SELECT PARA_INOUT;
+END$

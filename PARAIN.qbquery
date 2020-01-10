@@ -1,0 +1,8 @@
+﻿delimiter$
+drop procedure if exists in_parameter$
+create procedure in_parameter (IN PARA_IN INT)
+BEGIN
+SELECT PARA_IN;
+SET PARA_IN=2;
+SELECT PARA_IN;
+END$
